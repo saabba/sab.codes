@@ -1,0 +1,43 @@
+// Breakpoints
+$large-breakpoint: 64em !default;
+$medium-breakpoint: 42em !default;
+
+// Headers
+$header-heading-color: #fff !default;
+$header-bg-color: #3aafa9 !default;
+//$post-summary-bg-color: #ffc2c7 !default;
+$post-summary-bg-color: #def2f1 !default;
+$post-summary-bg-color-blue: #edf0f8 !default;
+$header-bg-color-secondary: #2b7a78 !default;
+//$header-bg-color-secondary: #262C3A !default;
+
+// Text
+$section-headings-color: #2b7a78 !default;
+//$section-headings-color: #FF606E !default;
+$body-text-color: #17252a !default;
+$body-link-color: #2b7a78 !default;
+$blockquote-text-color: #819198 !default;
+
+// Code
+$code-bg-color: #f3f6fa !default;
+$code-text-color: #567482 !default;
+
+// Borders
+$border-color: #dce6f0 !default;
+$table-border-color: #e9ebec !default;
+$hr-border-color: #eff0f1 !default;
+
+$spacing-unit:     30px !default;
+
+@mixin relative-font-size($ratio) {
+    font-size: #{$ratio}rem;
+  }
+
+$brand-color: #2b7a78 !default;
+$brand-color-light: #3aafa9 !default;
+
+$content-width:    800px !default;
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+$on-medium:        $on-palm !default;
+$on-large:         $on-laptop !default;

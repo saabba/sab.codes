@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {%- include head.html -%}
+
+    <body>
+
+      {%- include header.html -%}
+
+      <main id="content" class="main-content" role="main"> {{ content }}
+
+        <hr/>
+
+        <div class="things-change">
+          This page is up-to-date as of {{ page.month }} {{ page.day }}, {{ page.year }}.
+        </div>
+        <br/>
+    
+
+     {%- assign social = site.social -%}
+
+     <div class="footer-heading">
+      <table>
+        <tr>
+          <td> <a class="footer-title" href="{{ "/" | relative_url }}">{{site.title}}</a>
+          <br/>
+          <a href="/about" title="About me">by {{site.author.name}}</a>
+          </td>
+        
+          <td>
+            <a href="https://github.com/{{ social.github_username| cgi_escape | escape }}" title="{{ social.github_username | escape }}">
+              <svg class="svg-icon brand-color">
+                <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}">
+                </use>
+              </svg>
+              GitHub
+            </a>
+            <br/>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+      </main>
+    </body>
+  </html>

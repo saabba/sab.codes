@@ -1,7 +1,13 @@
 ---
-layout: post
+categories: jekyll update
+layout: default
 title:  "Welcome to Jekyll!"
-date:   2020-07-17 00:03:46 -0500
+date: 2020-07-17 00:03:46 -0500
+day: 17th
+month: July
+year: 2020
+author: sabrina
+permalink: 2020/07/17/welcom-to-jekyll/
 categories: jekyll update
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
