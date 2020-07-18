@@ -19,8 +19,8 @@ year: 2020
 This is a blog about different software development topics that I find interesting or had a hard time finding exactly what I was looking for.
 </p>
 
-I'm [Sabrina](about.md) and I'm ... .
-However, this is my personal blog, and the opinions expressed here are my own.
+I'm [Sabrina](about.md) aka [Sab](about.md).
+Hopefully you find some use out of this blog.
 
 </td>
 <td>

@@ -13,7 +13,7 @@ I'm Sabrina.
 
 <img class="just-me" src="/assets/me.jpg" alt="Me">
 
-More Stuff Here
+More stuff coming soon...
 
 Thanks for reading!<br>
 Sabrina
