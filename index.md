@@ -1,8 +1,6 @@
 ---
 layout: default
-day: 18th
-month: July
-year: 2020
+
 ---
 
 <div class="index_titles">
@@ -16,7 +14,7 @@ year: 2020
 <tr>
 <td>
 <p>
-This is a blog about different software development topics that I find interesting or had a hard time finding exactly what I was looking for.
+This is a blog about different software development topics that I find interesting, had a hard time finding exactly what I was looking for, or want to reference later.
 </p>
 
 I'm [Sabrina](about.md) aka [Sab](about.md).
@@ -36,132 +34,44 @@ Hopefully you find some use out of this blog.
 
 # Recent Posts
 
+{% for post in site.posts limit:4 %}
 <div class="backing">
 <div class="post-preview-10">
 
-## [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
+## [{{post.title}}]({{post.url}})
 
 <div class="post-preview-30">
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+{{post.excerpt}}
 
-[[Read more...](2020/07/17/welcom-to-jekyll/)]
+[[Read more...]({{post.url}})]
 
 </div>
 </div>
 </div>
 
+{% if forloop.last == false %}
 ---
+{% endif %}
 
-<div class="backing">
-<div class="post-preview-10">
-
-## [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-<div class="post-preview-30">
-
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-[[Read more...](2020/07/17/welcom-to-jekyll/)]
-
-</div>
-</div>
-</div>
-
----
-
-<div class="backing">
-<div class="post-preview-10">
-
-## [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-<div class="post-preview-30">
-
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-[[Read more...](2020/07/17/welcom-to-jekyll/)]
-
-</div>
-</div>
-</div>
-
----
-
-<div class="backing">
-<div class="post-preview-10">
-
-## [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-<div class="post-preview-30">
-
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-[[Read more...](2020/07/17/welcom-to-jekyll/)]
-
-</div>
-</div>
-</div>
-
----
-
-<div class="backing">
-<div class="post-preview-10">
-
-## [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-<div class="post-preview-30">
-
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-[[Read more...](2020/07/17/welcom-to-jekyll/)]
-
-</div>
-</div>
-</div>
-
-
+{% endfor %}
 <span class="big-rule">
 <hr/>
 </span>
 
 # All Posts
 
-## Category 1
+{% for category in site.categories %}
 
+{% capture category_name %}{{ category | first }}{% endcapture %}
+
+## {{category_name}}
 <div class="post-preview-30">
+{% for post in site.categories[category_name] %}
 
-» [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
+» [{{post.title}}]({{post.url}})
 
-» [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-» [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-» [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
+{% endfor %}
 </div>
 
-## Category 2
-
-<div class="post-preview-30">
-
-» [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-</div>
-
-## Other things
-
-<div class="post-preview-30">
-
-» [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-» [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-» [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-» [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-» [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-» [Welcome to Jekyll!](2020/07/17/welcom-to-jekyll/)
-
-</div>
+{% endfor %}

@@ -8,12 +8,14 @@
 
       <main id="content" class="main-content" role="main"> {{ content }}
 
-        <hr/>
 
+        {% if page.month != nil %}
+        <hr/>
         <div class="things-change">
           This page is up-to-date as of {{ page.month }} {{ page.day }}, {{ page.year }}.
         </div>
         <br/>
+        {% endif %}
     
 
      {%- assign social = site.social -%}
