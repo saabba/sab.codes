@@ -27,7 +27,8 @@ Hopefully you find some use out of this blog.
 </tr>
 </table>
 </div>
-
+{% assign post_count = site.posts | size %}
+{% if post_count > 0 %}
 <span class="big-rule">
 <hr/>
 </span>
@@ -55,6 +56,7 @@ Hopefully you find some use out of this blog.
 {% endif %}
 
 {% endfor %}
+{% endif %}
 <span class="big-rule">
 <hr/>
 </span>
@@ -75,3 +77,14 @@ Hopefully you find some use out of this blog.
 </div>
 
 {% endfor %}
+{% assign drafts_count = site.wip | size %}
+{% if drafts_count > 0 %}
+## Coming Soon
+<div class="post-preview-30">
+{% for draft in site.wip %}
+
+» {{draft.title}}
+
+{% endfor %}
+</div>
+{% endif %}
