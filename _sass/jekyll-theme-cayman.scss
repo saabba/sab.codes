@@ -361,22 +361,35 @@ a {
   }
 
   table {
-    display: block;
-    width: 100%;
+    //display: block;
+    //width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     overflow: auto;
     word-break: normal;
     word-break: keep-all; // For Firefox to horizontally scroll wider tables.
     -webkit-overflow-scrolling: touch;
     
-    th {
-      font-weight: bold;
-    }
-
     th,
     td {
       padding: 0.5rem 1rem;
       border: 1px solid $table-border-color;
     }
+
+    th {
+      font-weight: bold;
+      background: $table-header-color;
+      color: white;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+    }
+    th:first-child{
+      border-left: 1px solid $table-border-color;
+    }
+    th:last-child{
+      border-right: 1px solid $table-border-color;
+    }
+
   }
 
   dl {

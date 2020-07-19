@@ -79,7 +79,7 @@ Hopefully you find some use out of this blog.
 {% endfor %}
 {% assign drafts_count = site.wip | size %}
 {% if drafts_count > 0 %}
-## Coming Soon
+## Ideas
 <div class="post-preview-30">
 {% for draft in site.wip %}
 
